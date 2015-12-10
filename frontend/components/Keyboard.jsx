@@ -17,6 +17,10 @@ var Keyboard = React.createClass({
     KeyStore.addListener(this._keysChanged);
   },
 
+  componentWillUnmount: function () {
+    KeyStore.removeListener(this._keysChanged);
+  }
+
   render: function () {
     console.log("re-render "+this.state.keys);
     return (

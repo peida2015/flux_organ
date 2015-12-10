@@ -44,6 +44,7 @@ var KeyNoteMap = {
 var KeyListener = function () {
 
   $(document).on("keydown", function(e){
+    // console.log();
     KeyActions.keyPressed(KeyNoteMap[Mapping[e.keyCode]]);
   });
 
